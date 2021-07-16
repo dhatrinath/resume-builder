@@ -10,7 +10,7 @@ from django.core.files.storage import FileSystemStorage
 def Template1(request):
     if request.method=='POST':
         data=request.POST
-        img = Image.open("images/11th hr template-01.png").convert("RGB")
+        img = Image.open("images/project template-01.jpg").convert("RGB")
         loc1w=1829
         loc1h=450
         if request.FILES:
