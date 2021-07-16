@@ -12,7 +12,7 @@ def Template1(request):
         data=request.POST
         img = Image.open("images/project template-01.jpg").convert("RGB")
         loc1w=1829
-        loc1h=450
+        loc1h=365
         if request.FILES:
             uploadfile=request.FILES['document']
             fs=FileSystemStorage()
