@@ -5,7 +5,6 @@ from django.conf import settings
 import smtplib
 import textwrap3
 from email.message import EmailMessage
-import imghdr
 from django.core.files.storage import FileSystemStorage
 def Template1(request):
     if request.method=='POST':
@@ -111,7 +110,6 @@ def Template1(request):
         f = open(filename, 'rb')
         fdata = f.read()
         fname = 'Resume_ '+str(data["name"].replace(" ", "")) + '.pdf'
-        file_type = imghdr.what(f.name)
         msg.add_attachment(fdata, maintype='application', subtype='octet-stream', filename=fname)
         s.send_message(msg)
         s.quit()
